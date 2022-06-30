@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{29FFD7A5-DF5F-4CC2-BCB8-8C37CF45EF9B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Bank_Management_System</RootNamespace>
+    <AssemblyName>Bank Management System</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddMoney.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddMoney.Designer.cs">
+      <DependentUpon>AddMoney.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckBalance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckBalance.Designer.cs">
+      <DependentUpon>CheckBalance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Customer.cs" />
+    <Compile Include="Classes\Employee.cs" />
+    <Compile Include="Classes\Manager.cs" />
+    <Compile Include="Classes\User.cs" />
+    <Compile Include="CustomerAccountDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerAccountDetails.Designer.cs">
+      <DependentUpon>CustomerAccountDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerSignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerSignUp.Designer.cs">
+      <DependentUpon>CustomerSignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeDashboard.Designer.cs">
+      <DependentUpon>EmployeeDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeDetails.Designer.cs">
+      <DependentUpon>EmployeeDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\IDbEmployeeOpertions.cs" />
+    <Compile Include="Interfaces\IDbManagerOperations.cs" />
+    <Compile Include="Interfaces\IDbOperations.cs" />
+    <Compile Include="ManagerDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerDashboard.Designer.cs">
+      <DependentUpon>ManagerDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operations\DbEmployeeOperations.cs" />
+    <Compile Include="Operations\DbManagerOperations.cs" />
+    <Compile Include="Operations\DbOperation.cs" />
+    <Compile Include="PrivacyPolicy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrivacyPolicy.Designer.cs">
+      <DependentUpon>PrivacyPolicy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterEmployee.Designer.cs">
+      <DependentUpon>RegisterEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterManager.Designer.cs">
+      <DependentUpon>RegisterManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemoveAccount.Designer.cs">
+      <DependentUpon>RemoveAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveAccountApproval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemoveAccountApproval.Designer.cs">
+      <DependentUpon>RemoveAccountApproval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchAccount.Designer.cs">
+      <DependentUpon>SearchAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Start.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Start.Designer.cs">
+      <DependentUpon>Start.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SignIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignIn.Designer.cs">
+      <DependentUpon>SignIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateCustomer.Designer.cs">
+      <DependentUpon>UpdateCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateEmployee.Designer.cs">
+      <DependentUpon>UpdateEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WithdrawMoney.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WithdrawMoney.Designer.cs">
+      <DependentUpon>WithdrawMoney.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddMoney.resx">
+      <DependentUpon>AddMoney.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckBalance.resx">
+      <DependentUpon>CheckBalance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerAccountDetails.resx">
+      <DependentUpon>CustomerAccountDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerSignUp.resx">
+      <DependentUpon>CustomerSignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeDashboard.resx">
+      <DependentUpon>EmployeeDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeDetails.resx">
+      <DependentUpon>EmployeeDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerDashboard.resx">
+      <DependentUpon>ManagerDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrivacyPolicy.resx">
+      <DependentUpon>PrivacyPolicy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterEmployee.resx">
+      <DependentUpon>RegisterEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterManager.resx">
+      <DependentUpon>RegisterManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemoveAccount.resx">
+      <DependentUpon>RemoveAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemoveAccountApproval.resx">
+      <DependentUpon>RemoveAccountApproval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchAccount.resx">
+      <DependentUpon>SearchAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Start.resx">
+      <DependentUpon>Start.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SignIn.resx">
+      <DependentUpon>SignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateCustomer.resx">
+      <DependentUpon>UpdateCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateEmployee.resx">
+      <DependentUpon>UpdateEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WithdrawMoney.resx">
+      <DependentUpon>WithdrawMoney.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\dashboard backgroud 1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\start background image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\close button 1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Sign up background 1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\register.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\add money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\withdraw money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\check balance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\checkbook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\update account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\search account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\remove acc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\about.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\privacy-policy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\user profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\search2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Search1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Search logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Search Logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Search Logo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\go back button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Add Money backroud.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Add Money backroud 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Add Money 3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Add Money 4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\user Profile 2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\user Profile 11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\account.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
